@@ -12,7 +12,7 @@ const Root = () => {
             </header>
 
             {/* Main content area */}
-            <main className=" px-4 sm:px-6 lg:px-16 my-10">
+            <main className=" px-4 sm:px-6 lg:px-16 my-24">
                 {/* Each page rendered via Outlet */}
                 <Outlet />
             </main>
