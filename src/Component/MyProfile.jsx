@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useContext } from "react";
 import { AuthContext } from "../Auth/AuthContext";
 import axiosInstance from "../Api/axios";
@@ -32,6 +33,7 @@ const MyProfile = () => {
     );
 
   const badgeLabel = user.badge || "Bronze";
+
   const badgeClass = {
     Bronze: "bg-orange-500",
     Silver: "bg-gray-400",
@@ -42,11 +44,13 @@ const MyProfile = () => {
   return (
     <div className="p-5 max-w-3xl mx-auto space-y-6 min-h-screen 
                     bg-gray-50 dark:bg-gray-900 transition-colors duration-500">
+
       <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100 text-center md:text-left">
         My Profile
       </h2>
 
       <div className="relative bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg flex flex-col md:flex-row items-center md:items-start md:gap-8 transition hover:shadow-2xl overflow-hidden">
+
         {/* Subtle background gradient */}
         <div className="absolute inset-0 bg-gradient-to-tr from-indigo-100 via-white to-cyan-100 opacity-20 dark:from-indigo-800 dark:via-gray-800 dark:to-cyan-900 rounded-xl pointer-events-none" />
 
@@ -57,6 +61,7 @@ const MyProfile = () => {
         />
 
         <div className="text-center md:text-left space-y-2 z-10">
+
           <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 flex items-center gap-2">
             {user.displayName || "No Name"}
           </h3>
@@ -64,12 +69,7 @@ const MyProfile = () => {
           <p className="text-gray-600 dark:text-gray-300 flex items-center gap-2">
             📧 {user.email || "No Email"}
           </p>
-          <p className="text-gray-600 dark:text-gray-300 flex items-center gap-2">
-            📞 {user.phoneNumber || "No Phone"}
-          </p>
-          <p className="text-gray-600 dark:text-gray-300 flex items-center gap-2">
-            🏠 {user.address || "No Address"}
-          </p>
+
           <p className="text-gray-600 dark:text-gray-300">
             🗓 Member since: {new Date(user.createdAt).toLocaleDateString()}
           </p>
@@ -79,6 +79,7 @@ const MyProfile = () => {
           >
             {badgeLabel}
           </span>
+
         </div>
       </div>
     </div>

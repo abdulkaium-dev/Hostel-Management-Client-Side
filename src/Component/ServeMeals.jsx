@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import Swal from "sweetalert2";
 
 const axiosInstance = axios.create({
-  baseURL: "https://hotel-server-side-beta.vercel.app", // change to your backend URL
+  baseURL: "https://hotel-server-side-sandy.vercel.app", // change to your backend URL
 });
 
 const ServeMeals = () => {

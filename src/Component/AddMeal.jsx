@@ -55,7 +55,7 @@ const AddMeal = () => {
       };
 
       const response = await axiosInstance.post(
-        `${import.meta.env.REACT_APP_API_BASE_URL || "https://hotel-server-side-beta.vercel.app"}/meals`,
+        `${import.meta.env.REACT_APP_API_BASE_URL || "https://hotel-server-side-sandy.vercel.app"}/meals`,
         payload
       );
 

@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const axiosInstance = axios.create({
-  baseURL: "https://hotel-server-side-beta.vercel.app",
+  baseURL: "https://hotel-server-side-sandy.vercel.app",
 });
 
 const AllReviews = () => {

@@ -56,7 +56,7 @@ const Navbar = () => {
   const linksToRender = user ? userLinks : guestLinks;
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-[#4F46E5] dark:bg-gray-900 shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-[#1E3A8A] dark:bg-gray-900 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -70,7 +70,7 @@ const Navbar = () => {
               alt="Logo"
               className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-lg object-contain"
             />
-            <span className="whitespace-nowrap">Hostel Management</span>
+            <span className="whitespace-nowrap">Hostel Food Service Hub</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -236,3 +236,170 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+
+// {/* Desktop User Menu */}
+// {user && (
+//   <div className="hidden mt-4 md:flex items-center relative">
+//     <button
+//       onClick={toggleDropdown}
+//       className="focus:outline-none rounded-full border-2 border-[#06B6D4] px-4 py-2 text-white font-semibold hover:bg-white/10 transition"
+//     >
+//       {user?.role === "admin" ? "Admin" : "User"}
+//     </button>
+
+//     <AnimatePresence>
+//       {dropdownOpen && (
+//         <motion.div
+//           key="dropdown"
+//           initial={{ opacity: 0, scale: 0.95, y: -10 }}
+//           animate={{ opacity: 1, scale: 1, y: 12 }}
+//           exit={{ opacity: 0, scale: 0.95, y: -10 }}
+//           transition={{ duration: 0.2 }}
+//           className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 text-[#1E293B] dark:text-gray-100 rounded-md shadow-lg py-2 z-50"
+//           onMouseLeave={closeDropdown}
+//         >
+//           {/* User Information */}
+//           <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700">
+//             <p className="font-semibold">
+//               {user?.role === "admin" ? "Admin" : "User"}
+//             </p>
+//             <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
+//               {user.email}
+//             </p>
+//           </div>
+
+//           {/* Dashboard */}
+//           <Link
+//             to="/dashboard"
+//             onClick={closeDropdown}
+//             className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+//           >
+//             Dashboard
+//           </Link>
+
+//           {/* Logout */}
+//           <button
+//             onClick={handleLogout}
+//             className="w-full text-left px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+//           >
+//             Logout
+//           </button>
+//         </motion.div>
+//       )}
+//     </AnimatePresence>
+//   </div>
+// )}
+
+// {/* Mobile Hamburger */}
+// <div className="md:hidden">
+//   <button
+//     onClick={toggleMobileMenu}
+//     className="text-white dark:text-gray-100 focus:outline-none"
+//   >
+//     {mobileMenuOpen ? (
+//       <svg
+//         className="h-6 w-6"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth={2}
+//         viewBox="0 0 24 24"
+//       >
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M6 18L18 6M6 6l12 12"
+//         />
+//       </svg>
+//     ) : (
+//       <svg
+//         className="h-6 w-6"
+//         fill="none"
+//         stroke="currentColor"
+//         strokeWidth={2}
+//         viewBox="0 0 24 24"
+//       >
+//         <path
+//           strokeLinecap="round"
+//           strokeLinejoin="round"
+//           d="M4 6h16M4 12h16M4 18h16"
+//         />
+//       </svg>
+//     )}
+//   </button>
+// </div>
+
+// {/* Mobile Menu */}
+// <AnimatePresence>
+//   {mobileMenuOpen && (
+//     <motion.div
+//       key="mobileMenu"
+//       initial={{ opacity: 0, height: 0 }}
+//       animate={{ opacity: 1, height: "auto" }}
+//       exit={{ opacity: 0, height: 0 }}
+//       transition={{ duration: 0.2 }}
+//       className="md:hidden bg-[#4F46E5]/95 dark:bg-gray-900 px-4 py-3 space-y-3"
+//     >
+//       {/* Navigation Links */}
+//       {linksToRender.map(({ path, label }) => (
+//         <NavLink
+//           key={path}
+//           to={path}
+//           onClick={() => {
+//             closeMobileMenu();
+//             closeDropdown();
+//           }}
+//           className={({ isActive }) =>
+//             isActive
+//               ? "block text-[#06B6D4] border-b-2 border-[#06B6D4] pb-1 font-semibold"
+//               : "block text-white dark:text-gray-100 hover:text-[#06B6D4] transition-colors duration-300 py-1"
+//           }
+//         >
+//           {label}
+//         </NavLink>
+//       ))}
+
+//       {/* Mobile User Menu */}
+//       {user && (
+//         <div className="border-t border-[#06B6D4] dark:border-gray-600 pt-2 space-y-2">
+
+//           {/* User Information */}
+//           <div className="px-3 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-inner">
+//             <p className="text-[#1E293B] dark:text-gray-100 font-semibold">
+//               {user?.role === "admin" ? "Admin" : "User"}
+//             </p>
+
+//             <p className="text-gray-500 dark:text-gray-400 text-xs truncate">
+//               {user.email}
+//             </p>
+//           </div>
+
+//           {/* Dashboard */}
+//           <Link
+//             to="/dashboard"
+//             onClick={closeMobileMenu}
+//             className="block px-3 py-2 bg-white dark:bg-gray-800 text-[#1E293B] dark:text-gray-100 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition font-medium"
+//           >
+//             Dashboard
+//           </Link>
+
+//           {/* Logout */}
+//           <button
+//             onClick={handleLogout}
+//             className="block w-full text-left px-3 py-2 bg-white dark:bg-gray-800 text-[#1E293B] dark:text-gray-100 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition font-medium"
+//           >
+//             Logout
+//           </button>
+//         </div>
+//       )}
+//     </motion.div>
+//   )}
+// </AnimatePresence>
+// </div>
+// </div>
+// </nav>
+// );
+
+// };
+
+// export default Navbar;

@@ -20,7 +20,7 @@ const Dashboard = () => {
 
   const adminLinks = [
     { to: "/dashboard/admin-profile", label: "Admin Profile", icon: <GrUserAdmin className="text-primary w-5 h-5" /> },
-    { to: "/dashboard/overview", label: "Overview", icon: <FaClipboardList className="text-primary w-5 h-5" /> },
+    // { to: "/dashboard/overview", label: "Overview", icon: <FaClipboardList className="text-primary w-5 h-5" /> },
     { to: "/dashboard/manage-users", label: "Manage Users", icon: <FaUsers className="text-secondary w-5 h-5" /> },
     { to: "/dashboard/add-meal", label: "Add Meal", icon: <FaUtensils className="text-red-500 w-5 h-5" /> },
     { to: "/dashboard/all-meals", label: "All Meals", icon: <FaClipboardList className="text-yellow-500 w-5 h-5" /> },
@@ -32,7 +32,7 @@ const Dashboard = () => {
 
   const userLinks = [
     { to: "/dashboard/my-profile", label: "My Profile", icon: <FaUser className="text-secondary w-5 h-5" /> },
-    { to: "/dashboard/overview", label: "Overview", icon: <FaClipboardList className="text-primary w-5 h-5" /> },
+    // { to: "/dashboard/overview", label: "Overview", icon: <FaClipboardList className="text-primary w-5 h-5" /> },
     { to: "/dashboard/requested-meals", label: "Requested Meals", icon: <FaUtensils className="text-red-500 w-5 h-5" /> },
     { to: "/dashboard/my-reviews", label: "My Reviews", icon: <FaRegStar className="text-yellow-500 w-5 h-5" /> },
     { to: "/dashboard/payment-history", label: "Payment History", icon: <FaClipboardList className="text-primary w-5 h-5" /> },
